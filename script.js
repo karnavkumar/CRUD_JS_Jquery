@@ -1,5 +1,5 @@
 var mainData = [];
-getData();
+
 function check(){
 	var name = $("#name").val();
 	var n = name.toLowerCase().trim();
