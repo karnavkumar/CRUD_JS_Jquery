@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRUD App</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel=stylesheet href="bootstrap-theme.min.css">
+</head>
+<body class="container-fluid">
+  <div class="col-lg-3">
+    <form id="myform">
+      <legend>Add New Number</legend>
+      <input type="hidden" id="hiddenele">
+      <label id="error" style="color: red"></label>
+      <label for="name"></label>
+      <input type="text" class="form-control" id="name" placeholder="Name Please" onblur="check()">
+      <label for="number"></label>
+      <input type="number" class="form-control" id="number" placeholder="Mobile Number" onblur="check()">
+      <label></label>
+      <div class="radio">
+        <label>
+          <input type="radio" id="male" name="gender" value="male"> Male<br>
+          <input type="radio" id="female" name="gender" value="female"> Female
+        </label>
+      </div>
+
+      <label for="city"></label>
+      <select id="city" name="city" class="form-control">
+          <option value="" selected>Please Select City</option>   
+          <option value="Ahmedabad">Ahmedabad</option>
+          <option value="rajkot">rajkot</option>
+          <option value="surat">Surat</option>
+     </select>
+      <div id="checkbox" class="checkbox">
+        <label for="hobby">
+        <input type="checkbox" class="hobby" name="sport" value="cricket" id="cricket">Cricket
+        </div>
+        <div class="checkbox">
+        <label>
+        <input type="checkbox" class="hobby" name="sport" value="chess" id="chess">Chess
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+        <input type="checkbox" class="hobby" name="sport" value="hockey" id="hockey">Hockey
+        </label>
+      </div>
+      <label for="birthday"></label>
+      <input type="date" class="form-control" id="birthdate" name="birtdate">
+      <input class="btn btn-default" id="addValue" type="button" value="Add" onclick="addData()" style="display: block;" >
+      <input class="btn btn-default" id="updateValue" type="button" value="submit" onclick="updateData()" style="display: none;">
+      <input class="btn btn-default" id="resetButton" type="reset" value="reset">
+    </form>
+  </div>
+  <br>
+  <br>
+  <div class="table-responsive">
+    <legend>List Of Persons</legend>
+    <div id="tab">
+      <table class="table table-hover">
+        <tr>
+          <td>ID</td>
+          <td>Name</td>
+          <td>Number</td>
+          <td>Gender</td>
+          <td>Select City <input type="button" name="" value="Update" onclick="updateCity()"></td>
+          <td>city</td>
+          <td>hobby</td>
+          <td>birthdate</td>
+          <td>actions</td>
+
+        </tr>
+        <tbody id="tableHtml">
+
+        </tbody>
+      </table>
+    </div>
+    <!-- <script src="validate.min.js"></script> -->
+    <!-- <script src="validate.js"></script> -->
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
